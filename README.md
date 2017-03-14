@@ -1,72 +1,25 @@
 # java-bits
 
-## Develop
+# Build and run
 
-* Install JDK 8
-* Install IntelliJ Idea
-* Install Gradle
-* In IntelliJ, create a Gradle Project with support to Java
-  - Create New Project
-  - Select Gradle
-  - In Project SDK, click New and select the directory where SDK is installed
-  - Select that SDK
-  - Compile
-    - `GroupId` = `it.bebox.spikes`
-    - `ArtifactId` = `java-bits`
-    - `Version` = `0.1`
-  - Select `Auto import` and `Create directories for empty content roots automatically`
-  
-After this step, the filesystem should have the following structure
+This application uses the Gradle build system. You can either run `gradle` if you have Gradle installed, or run `./gradlew` and use the embedded wrapper, in case Gradle is not installed in your system.
 
-```
-~/java-bits/
-├── build.gradle
-├── gradle
-│   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
-├── gradlew
-├── gradlew.bat
-├── README.md
-├── settings.gradle
-└── src
-    ├── main
-    │   ├── java
-    │   └── resources
-    └── test
-        ├── java
-        └── resources
-
-9 directories, 7 files
-```
-
-* Write a sample class in the file `src/main/java/javabits/Main.java` with the content
-
-```
-package javabits;
-
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, world");
-    }
-}
-```
-
-* Trasform the library into an application, by adding these lines to `build.gradle`
-
-```
-apply plugin: 'application'
-
-mainClassName = 'javabits.Main'
-```
-
-* Run the applicaton with
+Run the applicaton with
 
 ```
 gradle run
 ```
 
-* Compile the application with
+Compile the application with
 ```
 gradle installDist
 ```
+
+You can get a list of all the available tasks by running
+
+```
+gradle tasks
+```
+# Develop
+
+Refer to [Development](docs/development.md) documentation.
