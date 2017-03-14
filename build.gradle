@@ -1,0 +1,18 @@
+group 'it.bebox.spikes'
+version '0.1'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+mainClassName = 'javabits.Main'
+
+sourceCompatibility = 1.6
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
